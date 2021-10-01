@@ -14,8 +14,6 @@ object get_starting_parameters {
     override def determine_quantile(array: Array[Double], quantile: Double): Double = {
       array.sortWith(_ < _).drop((array.length * quantile).toInt ).head}
 
-
-    override def
     val min_y: Double = xs.min
     val min_x: Double = xs.min
     val max_x: Double = xs.max
@@ -23,6 +21,8 @@ object get_starting_parameters {
 
     val mean_x: Double = xs.sum / xs.length
     val mid_y = (max_y - min_y) / 2.0 + min_y
+
+
     //val mid_x = xs.filter(   )
     val quantile_1x: Double = determine_quantile(xs, 0.1)
     val quantile_9x: Double = determine_quantile(xs, 0.9)
