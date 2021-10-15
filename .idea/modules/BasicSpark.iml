@@ -17,9 +17,11 @@
     <orderEntry type="library" name="sbt: com.clearspring.analytics:stream:2.7.0:jar" level="project" />
     <orderEntry type="library" name="sbt: com.esotericsoftware:kryo-shaded:4.0.2:jar" level="project" />
     <orderEntry type="library" name="sbt: com.esotericsoftware:minlog:1.3.0:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.6.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.6.7:jar" level="project" />
-    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-databind:2.6.7.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-annotations:2.9.8:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-core:2.9.8:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.core:jackson-databind:2.9.8:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.8:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.8:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-paranamer:2.7.9:jar" level="project" />
     <orderEntry type="library" name="sbt: com.fasterxml.jackson.module:jackson-module-scala_2.11:2.6.7.1:jar" level="project" />
     <orderEntry type="library" name="sbt: com.github.fommil.netlib:core:1.1.2:jar" level="project" />
@@ -50,6 +52,8 @@
     <orderEntry type="library" name="sbt: com.thoughtworks.paranamer:paranamer:2.8:jar" level="project" />
     <orderEntry type="library" name="sbt: com.twitter:chill-java:0.9.3:jar" level="project" />
     <orderEntry type="library" name="sbt: com.twitter:chill_2.11:0.9.3:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.play:play-functional_2.11:2.7.2:jar" level="project" />
+    <orderEntry type="library" name="sbt: com.typesafe.play:play-json_2.11:2.7.2:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-beanutils:commons-beanutils:1.7.0:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-cli:commons-cli:1.2:jar" level="project" />
     <orderEntry type="library" name="sbt: commons-codec:commons-codec:1.9:jar" level="project" />
@@ -78,6 +82,7 @@
     <orderEntry type="library" name="sbt: jfree:jcommon:1.0.16:jar" level="project" />
     <orderEntry type="library" name="sbt: jfree:jfreechart:1.0.13:jar" level="project" />
     <orderEntry type="library" name="sbt: jline:jline:0.9.94:jar" level="project" />
+    <orderEntry type="library" name="sbt: joda-time:joda-time:2.10.1:jar" level="project" />
     <orderEntry type="library" name="sbt: junit:junit:4.8.2:jar" level="project" />
     <orderEntry type="library" name="sbt: log4j:log4j:1.2.17:jar" level="project" />
     <orderEntry type="library" name="sbt: net.razorvine:pyrolite:4.13:jar" level="project" />
@@ -171,6 +176,7 @@
     <orderEntry type="library" name="sbt: org.spire-math:spire-macros_2.11:0.7.4:jar" level="project" />
     <orderEntry type="library" name="sbt: org.spire-math:spire_2.11:0.7.4:jar" level="project" />
     <orderEntry type="library" name="sbt: org.tukaani:xz:1.5:jar" level="project" />
+    <orderEntry type="library" name="sbt: org.typelevel:macro-compat_2.11:1.1.1:jar" level="project" />
     <orderEntry type="library" name="sbt: org.xerial.snappy:snappy-java:1.1.7.5:jar" level="project" />
     <orderEntry type="library" name="sbt: oro:oro:2.0.8:jar" level="project" />
     <orderEntry type="module-library">

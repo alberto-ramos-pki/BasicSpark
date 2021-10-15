@@ -1,0 +1,271 @@
+[
+  {
+    "name": "Richards function",
+    "equation": "Bottom + ((Top - Bottom) / ( 1.0 + ( 10.0 ^ ( (LogXb - x) * Hill )) ^ Symmetry))",
+    "calculatedStatistics": [
+      {
+        "parameter": "LogIc50",
+        "equation": "LogXb - (( 1.0 / Hill ) * (log10(( 2.0 ^ (1.0/Symmetry) - 1.0))))"
+      }
+    ],
+    "logX": true,
+    "starts": [
+      {
+        "parameter": "Bottom",
+        "value": "Yleft"
+      },
+      {
+        "parameter": "Top",
+        "value": "Yright"
+      },
+      {
+        "parameter": "LogXb",
+        "value": "Xmid"
+      },
+      {
+        "parameter": "Hill",
+        "value": "1.0"
+      },
+      {
+        "parameter": "Symmetry",
+        "value": "1.0"
+      }
+    ],
+    "ranges": [
+      {
+        "parameter": "LogXb",
+        "upper": "Xmax + 1.0",
+        "lower": "Xmin"
+      },
+      {
+        "parameter": "Hill",
+        "upper": "3.0",
+        "lower": "0.3"
+      },
+      {
+        "parameter": "Symmetry",
+        "upper": "2.0",
+        "lower": "0.5"
+      }
+    ],
+    "fixedParameters": [
+    ],
+    "plotting": {
+      "horizontalLines": [
+        "Top",
+        "Bottom"
+      ],
+      "verticalLines": [
+        "LogXb",
+        "LogIc50"
+      ]
+    }
+  },
+  {
+    "name": "5 parameter dose response",
+    "equation": "5 parameter asymmetric dose response",
+    "parent": "Richards function"
+  },
+  {
+    "name": "4 parameter dose response",
+    "parent": "5 parameter dose response",
+    "fixedParameters": [
+      "Symmetry"
+    ]
+  },
+  {
+    "name": "3 parameter dose response",
+    "parent": "5 parameter dose response",
+    "fixedParameters": [
+      "Symmetry",
+      "Hill"
+    ]
+  },
+  {
+    "name": "Biphasic dose response",
+    "equation": "Bottom + ( ((Top - Bottom)*Frac) / ( 1.0 + ( 10.0 ^ ( (LogIc501 - x) * Hill1 )) )) + ( ((Top - Bottom)*(1.0 - Frac)) / ( 1.0 + ( 10.0 ^ ( (LogIc502 - x) * Hill2 )) )) ",
+    "logX": true,
+    "starts": [
+      {
+        "parameter": "Bottom",
+        "value": "Yleft"
+      },
+      {
+        "parameter": "Top",
+        "value": "Yright"
+      },
+      {
+        "parameter": "LogIc501",
+        "value": "Xmid-0.5"
+      },
+      {
+        "parameter": "LogIc502",
+        "value": "Xmid+0.5"
+      },
+      {
+        "parameter": "Frac",
+        "value": "0.5"
+      },
+      {
+        "parameter": "Hill1",
+        "value": "1.0"
+      },
+      {
+        "parameter": "Hill2",
+        "value": "1.0"
+      }
+    ],
+    "ranges": [
+      {
+        "parameter": "LogIc501",
+        "upper": "Xmax + 1.0",
+        "lower": "Xmin"
+      },
+      {
+        "parameter": "LogIc502",
+        "upper": "Xmax + 1.0",
+        "lower": "Xmin"
+      },
+      {
+        "parameter": "Hill1",
+        "upper": "3.0",
+        "lower": "0.3"
+      },
+      {
+        "parameter": "Hill2",
+        "upper": "3.0",
+        "lower": "0.3"
+      },
+      {
+        "parameter": "Frac",
+        "upper": "1.0",
+        "lower": "0.0"
+      }
+    ],
+    "fixedParameters": [
+      //"Hill1", "Hill2"
+    ],
+    "plotting": {
+      "horizontalLines": [
+        "Top",
+        "Bottom"
+      ],
+      "verticalLines": [
+        "LogIc501",
+        "LogIc502"
+      ]
+    }
+  },
+  {
+    "name": "Radioactive decay",
+    "equation": "Nstart * ( e  ^ ( -1.0 * Kdecay * x ) )",
+    "logX": false,
+    "starts": [
+      {
+        "parameter": "Nstart",
+        "value": "Yleft"
+      },
+      {
+        "parameter": "Kdecay",
+        "value": "1.0"
+      }
+    ],
+    "calculatedStatistics": [
+      {
+        "parameter": "Thalf",
+        "equation": "log( 2.0 ) / Kdecay "
+      }
+    ],
+    "plotting": {
+      "verticalLines" : [
+        "Thalf"
+      ]
+    }
+  },
+  {
+    "name": "Polynomial of degree 3",
+    "equation": "Polynomial of degree 3",
+    "logX": true
+  },
+  {
+    "name": "Polynomial of degree 4",
+    "equation": "Polynomial of degree 4",
+    "logX": true
+  },
+  {
+    "name": "Polynomial of degree 5",
+    "equation": "Polynomial of degree 5",
+    "logX": true
+  },
+  {
+    "name": "Arithmetic 5 parameter dose response",
+    "equation": "Bottom+((Top-Bottom)/((1+((x/Xb)^Hill))^Symmetry))",
+    "calculatedStatistics": [
+      {
+        "parameter": "LogXb",
+        "equation": "log10(Xb)"
+      },
+      {
+        "parameter": "LogIc50",
+        "equation": "LogXb - (( 1.0 / Hill ) * (log10(( 2.0 ^ (1.0/Symmetry) - 1.0))))"
+      },
+      {
+        "parameter": "Ic50",
+        "equation": "10 ^ LogIc50"
+      }
+    ],
+    "logX": false,
+    "starts": [
+      {
+        "parameter": "Bottom",
+        "value": "Yleft"
+      },
+      {
+        "parameter": "Top",
+        "value": "Yright"
+      },
+      {
+        "parameter": "Xb",
+        "value": "XgeometricMean"
+      },
+      {
+        "parameter": "Hill",
+        "value": "1.0"
+      },
+      {
+        "parameter": "Symmetry",
+        "value": "1.0"
+      }
+    ],
+    "ranges": [
+      {
+        "parameter": "Xb",
+        "upper": "Xmax * 10.0",
+        "lower": "Xmin"
+      },
+      {
+        "parameter": "Hill",
+        "upper": "3.0",
+        "lower": "0.3"
+      },
+      {
+        "parameter": "Symmetry",
+        "upper": "2.0",
+        "lower": "0.5"
+      }
+    ],
+    "fixedParameters": [
+    ],
+    "plotting": {
+      "horizontalLines": [
+        "Top",
+        "Bottom"
+      ],
+      "verticalLines": [
+        "Xb",
+        "Ic50"
+      ],
+      "displayLogX": true
+    }
+  }
+]
